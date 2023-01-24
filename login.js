@@ -1,26 +1,52 @@
-const fs = require('fs'); 
-const form = document.querySelector("form"); 
-form.addEventListener("submit", (e) => {   e.preventDefault();   
-	const email = document.querySelector("input[name='email']").value;   
-	const username = document.querySelector("input[name='username']").value;   
-	const password = document.querySelector("input[name='password']").value;   
-	const rpassword = document.querySelector("input[name='rpassword']").value;   
+const mysql = require('mysql');
 
-	if (!email || !username || !password || !rpassword) {     
-		console.log("Please fill out all fields");     
-	return;   
-}   
-	if (password !== rpassword) {     
-		console.log("Passwords do not match");     
-	return;   
-}   
-if (password.length < 8) {     
-	console.log("Password must be at least 8 characters");     
-	return;   
-}   
-const data = { email, username, password };   
-fs.writeFile('Output.txt', JSON.stringify(data), (err) => {     
-	if (err) throw err;     
-	console.log('Data written to file');   
-}); 
+const express = require('express');
+const session = require('express-session');
+const path = require('path');
+
+const connection = mysql.createConnection({
+	host     : 'localhost',
+	user     : 'root',
+	password : 'admin',
+	database : 'nodelogin'
 });
+
+const app = express();
+
+app.use(session({
+	secret: 'secret',
+	resave: true,
+	saveUninitialized: true
+}));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'static')));
+
+app.get('/', function(request, response) {
+	response.sendFile(path.join(__dirname + '/login.html'));
+});
+
+app.post('/auth', function(request, response) {
+	let username = request.body.username;
+	let password = request.body.password;
+	if (username && password) {
+		connection.query('SELECT * FROM accounts WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
+			if (error) throw error;
+			if (results.length > 0) {
+				request.session.loggedin = true;
+				request.session.username = username;
+				response.redirect('/home');
+			} else {
+				response.send('Incorrect Username and/or Password!');
+			}			
+			response.end();
+		});
+	} else {
+		response.send('Please enter Username and Password!');
+		response.end();
+	}
+});
+
+
+
+app.listen(3000);
