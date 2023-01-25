@@ -56,7 +56,7 @@ nav ul li a:hover::after{
 }
 .bubbles img{
     width: 50px;
-    animation: bubble 7s linear infinite;
+    animation: bubble 7s cubic-bezier(0.3, 0, 0, 0.5) infinite;
 }
 .bubbles{
     width:100%;
@@ -94,14 +94,14 @@ nav ul li a:hover::after{
     width: 10px;
 }
 .bubbles img:nth-child(4){
-    animation-delay: 1s;
+    animation-delay: -5s;
 }
 .bubbles img:nth-child(5){
     animation-delay: 4.5s;
     width: 35px;
 }
 .bubbles img:nth-child(6){
-    animation-delay: 3s;
+    animation-delay: -3s;
 }
 .bubbles img:nth-child(7){
     animation-delay: 7s;
