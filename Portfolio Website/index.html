@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c76bc25f8c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <image src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text"></div>
+        <p>Wannabe Software developer</p>
+        <h1>Hello I'm, <span>Joe</span><br>I'm an A Level Student</h1>
+    </div>
+</div>
+<!-- About -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src = "images/image2.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hello, my name is Joe, I am currently an A-Level student studying maths, French and computer science. In the future i wish to go into software development, which is why i have decided to create this portfolio website so that i can demonstrate some skills that i have aquired throughout my time at school.</p>
+                
+                <div class="tab-titles">
+                    <p class = "tab-links active-link" onclick ="opentab('skills')">Skills</p>
+                    <p class = "tab-links" onclick ="opentab('experience')">Experience</p>
+                </div>
+                <div class="tab-contents active-tab" id = "skills">
+                    <ul>
+                        <li><span>Python</span><br>Very familiar with Python</li>
+                        <li><span>HTML</span><br>Able to create nice looking websites</li>
+                        <li><span>CSS</span><br>Able to create nice looking websites</li>
+                        <li><span>Adobe Products</span><br>Familiar with ae, pr, ps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id = "experience">
+                    <ul>
+                        <li><span>2022</span><br>Work Experience at Raytheon for a week</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Portfolio -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class = "sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src = "images/code1.jpeg">
+                <div class="layer">
+                    <h3>Virtual Assistant</h3>
+                    <p>A virtual assistant made entirely in python using machine learning</p>
+                    <a href="https://github.com/ItzSimplyJoe/Virtual-Assistant/blob/main/README.md"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src = "images/code2.jpg">
+                <div class="layer">
+                    <h3>Elf game</h3>
+                    <p>A simple, christmas themed elf game where the aim is to earn as much money as you can!</p>
+                    <a href="https://github.com/ItzSimplyJoe/Python-ElfGame/blob/main/README.md"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src = "images/code3.jpg">
+                <div class="layer">
+                    <h3>This website</h3>
+                    <p>A nice clean modern website made in HTML, CSS and JS</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href = "https://github.com/ItzSimplyJoe" class="btn" >See more</a>
+    </div>
+</div>
+<!-- Contact -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact">
+                <h1 class = "sub-title">Contact Me</h1>
+                <p><i class = "fa-regular fa-envelope"></i>JoeBostock30@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/joe-bostock-5b1b1b1b9/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/joejbostock_/" ><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/ItzSimplyJoe" ><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for (var i = 0; i < tablinks.length; i++){
+            tablinks[i].className = tablinks[i].className.replace("active-link", "");
+        }
+        for (var i = 0; i < tabcontents.length; i++){
+            tabcontents[i].className = tabcontents[i].className.replace("active-tab", "");
+        }
+        document.getElementById(tabname).className += " active-tab";
+        event.currentTarget.className += " active-link";
+    }
+</script>
+</body>
+</html>
