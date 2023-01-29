@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+body
+{
+  background:#1c0522;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color:#000;
+  margin: 0;
+  padding: 0;
+}
+section
+{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+header .logo
+{
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+header ul
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li
+{
+  list-style: none;
+  margin-left: 20px;
+}
+header ul li a
+{
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
+}
+header ul li a.active,
+header ul li a:hover
+{
+  background: #fff;
+  color: #2b1055;
+}
+section:before
+{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top,#1c0522,transparent);
+  z-index: 1000;
+}
+section img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+section img#moon
+{
+  mix-blend-mode: screen;
+}
+section img#mountains_front
+{
+  z-index: 10;
+}
+h2#text
+{
+  position: absolute;
+  color: #fff;
+  right: -350px;
+  white-space: nowrap;
+  font-size: 7.5vw;
+  transform: translateY(0px);
+}
+#btn
+{
+  text-decoration: none;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: #fff;
+  color: #2b1055;
+  transform: translateY(100px);
+  font-size: 1.5em;
+  z-index: 9;
+}
+.about
+{
+  position: relative;
+  min-height: 500px;
+  padding: 100px;
+  background: #1c0522;
+}
+.about h2
+{
+  font-size: 3em;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.about p
+{
+  font-size: 1.2em;
+  color: #fff;
+  text-align: center;
+}
+.portfolio p{
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    align-items: center;
+    text-align: center;
+}
+.swiper-container
+{
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.swiper-slide
+{
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 400px;
+  background: #060c21;
+}
+.swiper-slide .imgBx
+{
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.swiper-slide .imgBx img
+{
+  width: 100%;
+}
+.swiper-slide .details
+{
+  box-sizing: border-box;
+  padding: 20px;
+}
+.swiper-slide .details h3
+{
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  text-align: center;
+  line-height: 20px;
+}
+.swiper-slide .details h3 span
+{
+  font-size: 16px;
+  color: orange;
+}
+.swiper-slide h3{
+  color:#fff;
+}
+.details a{
+  color: #fff
+}
+
+
+.container
+{
+	position: relative;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	grid-template-rows: auto;
+	grid-gap: 0 40px;
+  padding: 50px 0;
+  padding-left: 50px;
+  padding-right: 50px;
+  align-items: center;
+}
+.container .box
+{
+	position: relative;
+	height: 400px;
+	background: #060c21;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #000;
+}
+.container .box:before
+{
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: #fff;
+	transform: skew(2deg,2deg);
+	z-index: -1;
+}
+.container .box:nth-child(1):before
+{
+	background: linear-gradient(315deg,#00bcd4,#5d02ff);
+}
+.container .box:nth-child(2):before
+{
+	background: linear-gradient(315deg,#5d02ff,#00bcd4)	
+}
+.container .box:nth-child(3):before
+{
+	background: linear-gradient(315deg,#00bcd4,#5d02ff)
+}
+.container .box:nth-child(4):before
+{
+	background: linear-gradient(315deg,#5d02ff,#00bcd4)
+}
+.container .box:after
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: rgba(255,255,255,0.05);
+	pointer-events: none;
+}
+.experiences{
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+}
+.content
+{
+	position: relative;
+	padding: 20px;
+	transform: translateY(40px);
+}
+.box .content h2
+{
+	position: absolute;
+	top: -60px;
+	right: 20px;
+	margin: 0;
+	padding: 0;
+	font-size: 10em;
+	color: rgba(255,255,255,.05);
+	transition: 0.5s;
+}
+.box:hover .content h2
+{
+	top: -140px;
+}
+.box .content h3
+{
+	margin: 0 0 10px;
+	padding: 0;
+	font-size: 24px;
+	font-weight: 500;
+	color: #fff;
+}
+.box .content p
+{
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-size: 16px;
+}
+.box .content a
+{
+	position: relative;
+	margin: 20px 0 0;
+	padding: 10px 20px;
+	text-decoration: none;
+	border: 1px solid #fff;
+	display: inline-block;
+	color: #fff;
+	transition: 0.5s;
+	transform: translateY(-40px);
+	opacity: 0;
+	visibility: hidden;
+}
+.box:hover .content a
+{
+	transform: translateY(0);
+	opacity: 1;
+	visibility: visible;
+}
+.box .content a:hover
+{
+	color: #000;
+	background: #fff;
+}
+.goals{
+    font-size: 16px;
+    color: #fff;
+    align-items: center;
+    padding: 50px;
+}
+.goals p{
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    align-items: center;
+    text-align: center;
+}
+:root {
+  --primary-color: #1c0522;
+  --background-color: #060c21;
+  --font: sans-serif;
+}
+.timeline {
+  background: var(--primary-color);
+  margin: 20px auto;
+  padding: 20px;
+}
+.card {
+  position: relative;
+  max-width: 100%;
+}
+.card:nth-child(odd) {
+  padding: 30px 0 30px 30px;
+}
+.card:nth-child(even) {
+  padding: 30px 30px 30px 0;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  border: solid #00bcd4;
+}
+.card:nth-child(odd)::before {
+  left: 0px;
+  top: -4.5px;
+  bottom: -4.5px;
+  border-width: 5px 0 5px 5px;
+  border-radius: 50px 0 0 50px;
+}
+.card:nth-child(even)::before {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-width: 5px 5px 5px 0;
+  border-radius: 0 50px 50px 0;
+}
+.card:first-child::before {
+  border-top: 0;
+  border-top-left-radius: 0;
+}
+.card:last-child:nth-child(odd)::before {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+}
+.card:last-child:nth-child(even)::before {
+  border-bottom: 0;
+  border-bottom-right-radius: 0;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  background: #3e095a;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+.info p{
+  font-size: 18px;
+  font-weight: 200;
+}
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #00bcd4;
+  position: relative;
+}
+.title::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 999px;
+  border: 3px solid #00bcd4;
+}
+.card:nth-child(odd) > .info > .title {
+  text-align: left;
+}
+.card:nth-child(odd) > .info > .text{
+  text-align: left;
+}
+.card:nth-child(even) > .info > .title {
+  text-align: right;
+}
+.card:nth-child(even) > .info > .text{
+  text-align: right;
+}
+.card:nth-child(odd) > .info > .title::before {
+  left: -45px;
+}
+.card:nth-child(even) > .info > .title::before {
+  right: -45px;
+}
+
+
+@media (max-width: 768px) {
+  .card:nth-child(odd) {
+    padding: 30px 0 30px 0;
+  }
+  .card:nth-child(even) {
+    padding: 30px 0 30px 0;
+  }
+  .card:nth-child(odd)::before {
+    left: 0px;
+    top: -4.5px;
+    bottom: -4.5px;
+    border-width: 5px 0 5px 0;
+    border-radius: 0;
+  }
+  .card:nth-child(even)::before {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-width: 5px 0 5px 0;
+    border-radius: 0;
+  }
+  .card:nth-child(odd) > .info > .title {
+    text-align: center;
+  }
+  .card:nth-child(odd) > .info > .text{
+    text-align: center;
+  }
+  .card:nth-child(even) > .info > .title {
+    text-align: center;
+  }
+  .card:nth-child(even) > .info > .text{
+    text-align: center;
+  }
+  .card:nth-child(odd) > .info > .title::before {
+    left: 0px;
+  }
+  .card:nth-child(even) > .info > .title::before {
+    right: 0px;
+  }
+}
+
