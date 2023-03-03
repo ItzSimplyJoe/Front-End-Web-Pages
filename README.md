@@ -1,5 +1,9 @@
 # Front End WebPages 💻
-Front-End Web Pages is a collection of front-end web development projects built using HTML, CSS, and JavaScript. These projects showcase my skills and experience in web development.
+![CSS image]https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white
+![HTML image]https://img.shields.io/badge/HTML-FFD43B?style=for-the-badge&logo=html5&logoColor=white
+![JS image]https://img.shields.io/badge/JavaScript-FFD43B?style=for-the-badge&logo=javascript&logoColor=white
+
+######Front-End Web Pages is a collection of front-end web development projects built using HTML, CSS, and JavaScript. These projects showcase my skills and experience in web development.
 
 ## Projects
 The following projects are included in this repository:
