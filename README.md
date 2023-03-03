@@ -8,6 +8,7 @@ Project 1: My personal portfolio page
 Project 2: My old portfolio page
 Project 3: A simple landing page with an ocean theme
 Project 4: A simple login and signup front end page
+Project 5: A simple landing page with a space theme
 Each project is contained within its own folder and includes all of the necessary files, including HTML, CSS, and JavaScript.
 
 ## Usage
